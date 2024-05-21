@@ -7,10 +7,14 @@
 html {
     overflow: scroll;
     overflow-x: hidden;
-    /* overflow-y: hidden; */
 }
 
 body {
     font-family: "Inter", sans-serif !important;
     padding-top: 80px;
+}
+
+.jumbotron-bg {
+    height: 30em;
+    background-image: url('../img/yogyakarta-kitchen.jpg');
 }
