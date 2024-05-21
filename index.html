@@ -104,7 +104,7 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container mb-5">
       <div class="owl-carousel owl-theme">
 
         <div class="item">
@@ -273,9 +273,9 @@
           <div class="d-flex flex-column flex-sm-row justify-content-between py-4 border-top">
             <p>© 2024 Company, Inc. All rights reserved.</p>
             <ul class="list-unstyled d-flex">
-              <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="bx bxl-twitter bx-sm"></i></a></li>
-              <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="bx bxl-instagram bx-sm"></i></a></li>
-              <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="bx bxl-facebook-circle bx-sm"></i></a></li>
+              <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="bx bxl-twitter bx-sm bx-tada-hover"></i></a></li>
+              <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="bx bxl-instagram bx-sm bx-tada-hover"></i></a></li>
+              <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="bx bxl-facebook-circle bx-sm bx-tada-hover"></i></a></li>
             </ul>
           </div>
         </div>
@@ -292,11 +292,15 @@
       $(".owl-carousel").owlCarousel({
         loop: true,
         margin: 10,
-        nav: false,
+        nav: true,
         dots: false,
         autoplay: true,
         autoplayTimeout: 5000,
         autoplayHoverPause: true,
+        navText:[
+            "<i class='bx bxs-left-arrow-circle' ></i>",
+            "<i class='bx bxs-right-arrow-circle' ></i>",
+        ],
         responsive: {
           0: {
             items: 1,
