@@ -3,11 +3,17 @@
 html {
   overflow: scroll;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Inter", sans-serif !important;
   padding-top: 80px;
+}
+
+.search-bar {
+  padding: .5rem 1rem !important;
+  font-size: .85rem !important;
 }
 
 .jumbotron-bg {
@@ -21,10 +27,10 @@ body {
 .owl-nav button i {
   color: gray;
   transition: .3s ease;
-  -webkit-transition:;
-  -moz-transition:;
-  -ms-transition:;
-  -o-transition:;
+  -webkit-transition:.3s ease;
+  -moz-transition:.3s ease;
+  -ms-transition:.3s ease;
+  -o-transition:.3s ease;
 }
 
 .owl-theme .owl-nav [class*=owl-]:hover {
