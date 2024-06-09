@@ -1,18 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Sign Up - Njajan UPN Admin</title>
-
-        <!-- favicon -->
-        <link rel="icon" type="image/x-icon" href="/dist/img/favicon.ico" />
-
-        <!-- Style Admin -->
-        <link href="../dist/css/style-admin.css" rel="stylesheet" />
+        <?php include './admin/components/style.php' ?>
     </head>
     <body>
         <div id="layoutAuthentication">
@@ -44,7 +33,7 @@
                                     </form>
                                 </div>
                                 <div class="card-footer text-center py-3">
-                                    <div class="small"><a href="index.html">Have an account? Go to login</a></div>
+                                    <div class="small"><a href="index.php">Have an account? Go to login</a></div>
                                 </div>
                             </div>
                         </div>
@@ -54,8 +43,6 @@
             </div>
         </div>
 
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="../dist/js/scripts.js"></script>
+        <?php include './admin/components/script.php' ?>
     </body>
 </html>

@@ -1,24 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Dashboard</title>
-        
-        <!-- favicon -->
-        <link rel="icon" type="image/x-icon" href="/dist/img/favicon.ico" />
-
-        <!-- DataTables CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-
-        <!-- Style Admin -->
-        <link href="../dist/css/style-admin.css" rel="stylesheet" />
-
-        <!-- Box Icons -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css" integrity="sha512-cn16Qw8mzTBKpu08X0fwhTSv02kK/FojjNLz0bwp2xJ4H+yalwzXKFw/5cLzuBZCxGWIA+95X4skzvo8STNtSg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <?php include './admin/components/style.php' ?>
     </head>
     <body class="sb-nav-fixed">
         <!-- Navbar Start -->
@@ -135,29 +118,13 @@
                         </div>
                     </div>
                 </main>
-                <!-- Main Content End -->
 
-                <!-- Footer Start -->
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Njajan UPN 2024</div>
-                        </div>
-                    </div>
-                </footer>
-                <!-- Footer End -->
+                <?php include './admin/components/footer.php' ?>
 
             </div>
         </div>
 
 
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="../dist/js/scripts.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-        <script src="assets/demo/chart-area-demo.js"></script>
-        <script src="assets/demo/chart-bar-demo.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
-        <script src="../dist/js/datatables-simple-demo.js"></script>
+        <?php include './admin/components/script.php' ?>
     </body>
 </html>
