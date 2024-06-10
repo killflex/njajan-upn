@@ -18,7 +18,7 @@
 			$_SESSION['id_admin'] = $coba["id_admin"];
 			$_SESSION['role'] = "admin";
 			$_SESSION['status'] = "login";
-			header("location:admin/dashboard.php");
+			header("location:dashboard.php");
 		}else{
 			header("location:index.php");
 		}

@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include './admin/components/style.php' ?>
+        <?php include 'components/style.php' ?>
     </head>
     <body>
         <div id="layoutAuthentication">
             <div id="layoutAuthentication_content">
-
                 <main>
                     <div class="container min-vh-100 d-flex justify-content-center align-items-center">
                         <div class="col-12 col-lg-5">
                             <div class="card shadow-lg border-0 rounded-lg">
-                                    <div class="card-header d-flex justify-content-center py-3">
-                                        <img src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="" srcset="" width="200px">
-                                    </div>                                <div class="card-body">
+                                <div class="card-header d-flex justify-content-center py-3">
+                                    <img src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="" srcset="" width="200px">
+                                </div>                                
+                                <div class="card-body">
                                     <form>
                                         <div class="form-floating mb-3">
                                             <input class="form-control" id="inputUsername" type="text" placeholder="Username" />
@@ -39,10 +39,9 @@
                         </div>
                     </div>
                 </main>
-
             </div>
         </div>
 
-        <?php include './admin/components/script.php' ?>
+        <?php include 'components/script.php' ?>
     </body>
 </html>

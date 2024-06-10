@@ -32,10 +32,8 @@
       <div class="container mb-4">
         <div class="owl-carousel owl-theme">
 
-          <?php
-            $query =  "SELECT t.id_tempat, t.nama_tempat, r.id_rincian, r.tentang, g.id_gambar, g.gambar FROM tempat t LEFT JOIN rincian r ON t.id_tempat = r.id_tempat LEFT JOIN gambar g ON t.id_tempat = g.id_tempat WHERE t.kategori = 'Kafe'";
-            foreach (mysqli_query($koneksi, $query) as $card): 
-          ?>
+          <?php $query =  "SELECT t.id_tempat, t.nama_tempat, r.id_rincian, r.tentang, g.id_gambar, g.gambar FROM tempat t LEFT JOIN rincian r ON t.id_tempat = r.id_tempat LEFT JOIN gambar g ON t.id_tempat = g.id_tempat WHERE t.kategori = 'Kafe'";
+          foreach (mysqli_query($koneksi, $query) as $card): ?>
           <div class="item rounded-3">
             <div class="card border border-1">
               <div class="cc-item">

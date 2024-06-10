@@ -1,50 +1,36 @@
+<?php
+    include '../koneksi.php';
+    include 'components/session.php';
+    $data = mysqli_query($koneksi, "SELECT * FROM admin")
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include './admin/components/style.php' ?>
+        <?php include 'components/style.php' ?>
     </head>
     <body class="sb-nav-fixed">
-
-        <!-- Navbar Start -->
-        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <a class="navbar-brand d-flex justify-content-center align-content-center" href="index.html">
-                <img src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="" class="" width="160">
-            </a>
-            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-            <ul class="navbar-nav d-inline-block ms-auto me-3 me-lg-4">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item disabled" href="#!">Ferry Hasan</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <!-- Navbar End -->
+        <?php include 'components/navbar.php' ?>
 
         <div id="layoutSidenav">
-
-            <!-- Sidebar Start -->
             <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Main Page</div>
-                            <a class="nav-link" href="dashboard.html">
+                            <a class="nav-link" href="dashboard.php">
                                 <div class="sb-nav-link-icon d-flex justify-content-center">
                                     <i class='bx bxs-dashboard py-auto bx-xs'></i>
                                 </div>
                                 Dashboard
                             </a>
-                            <a class="nav-link" href="kelola-tempat.html">
+                            <a class="nav-link" href="kelola-tempat.php">
                                 <div class="sb-nav-link-icon d-flex justify-content-center">
                                     <i class='bx bxs-store-alt py-auto bx-xs'></i>
                                 </div>
                                 Kelola Tempat
                             </a>
-                            <a class="nav-link active" href="kelola-admin.html">
+                            <a class="nav-link active" href="kelola-admin.php">
                                 <div class="sb-nav-link-icon d-flex justify-content-center">
                                     <i class='bx bxs-user-rectangle py-auto bx-xs' ></i>
                                 </div>
@@ -54,60 +40,45 @@
                     </div>
                 </nav>
             </div>
-            <!-- Sidebar End -->
 
-            <!-- Main Content Start -->
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Tables</h1>
+                        <h1 class="mt-4">Kelola Admin</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Tables</li>
+                            <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Kelola Admin</li>
                         </ol>
                         <div class="card mb-4">
-                            <div class="card-body">
-                                DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
-                                <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>
-                                .
-                            </div>
-                        </div>
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <i class="fas fa-table me-1"></i>
-                                DataTable Example
-                            </div>
-                            <div class="card-body">
+                            <div class="d-flex justify-content-end align-items-center card-header">
+                                <a class="btn btn-success btn-sm add" data-bs-toggle="modal" data-bs-target="#AddModal" href="javascript:void(0);" onclick="resetAllInput()"><i class="fas fa-plus fa-sm fa-fw"></i> Tambah Admin</a>
+                            </div>                            
+                            <div class="card-body">    
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th>No.</th>
+                                            <th>Username</th>
+                                            <th>Role</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
-                                        </tr>
-                                    </tfoot>
                                     <tbody>
+                                        <?php $no = 1;
+                                        foreach ($data as $tabel) : ?>
                                         <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
+                                            
+                                            <td><?= $no ?></td>
+                                            <td><?= $tabel['username'] ?></td>
+                                            <td><?= $tabel['role'] ?></td>
+                                            <td>
+                                                <a class="text-warning edit" data-bs-toggle="modal" data-bs-target="#EditModal" data-id_admin="<?= $tabel['id_admin'] ?>" data-username="<?= $tabel['username'] ?>" data-role="<?= $tabel['role'] ?>" href="javascript:void(0) edit;"><i class='bx bxs-edit bx-sm'></i></a>
+                                                <a class="text-danger delete" data-bs-toggle="modal" data-bs-target="#DeleteModal" data-id_admin="<?= $tabel['id_admin'] ?>" data-username="<?= $tabel['username'] ?>" data-role="<?= $tabel['role'] ?>" href="javascript:void(0) delete;"><i class='bx bxs-trash bx-sm' ></i></a>
+                                            </td>
+                                            
                                         </tr>
+                                        <?php $no++;
+                                        endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -115,11 +86,16 @@
                     </div>
                 </main>
 
-                <?php include './admin/components/footer.php' ?>
+                <?php include 'components/footer.php' ?>
 
             </div>
         </div>
 
-        <?php include './admin/components/script.php' ?>
+        <?php 
+            include 'components/script.php';
+            include 'components/modal/modal_tambah_admin.php';
+            include 'components/modal/modal_edit_admin.php';
+            include 'components/modal/modal_delete_admin.php'; 
+        ?>
     </body>
 </html>
