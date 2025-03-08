@@ -8,7 +8,7 @@
     <?php include './components/navbar.php' ?>
 
     <div class="container pt-3">
-      <div class="jumbotron-bg p-2 p-lg-5 mb-5 bg-body-tertiary rounded-3 text-white">
+      <div class="jumbotron-bg p-2 p-lg-5 mb-5 bg-body-tertiary rounded-3 text-white" >
         <div class="container-fluid py-5">
           <h1 class="display-5 fw-bold t-shadow">Njajan UPN</h1>
           <p class="col-md-12 fs-4 t-shadow">Selamat datang di Njajan UPN, situs web yang dirancang untuk membantu para mahasiswa maupun pengunjung menemukan tempat makan terbaik di sekitar kampus. </p>

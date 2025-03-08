@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 * {
   margin: 0;
@@ -19,8 +19,8 @@ body {
 }
 
 .search-bar {
-  padding: .5rem 1rem !important;
-  font-size: .85rem !important;
+  padding: 0.5rem 1rem !important;
+  font-size: 0.85rem !important;
 }
 
 .jumbotron-bg {
@@ -33,14 +33,14 @@ body {
 
 .owl-nav button i {
   color: gray;
-  transition: .3s ease;
-  -webkit-transition:.3s ease;
-  -moz-transition:.3s ease;
-  -ms-transition:.3s ease;
-  -o-transition:.3s ease;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
 }
 
-.owl-theme .owl-nav [class*=owl-]:hover {
+.owl-theme .owl-nav [class*="owl-"]:hover {
   background: transparent !important;
   color: transparent !important;
 }
@@ -86,11 +86,11 @@ body {
 }
 
 .t-shadow {
-  text-shadow: 1px 1px .5px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 0.5px rgba(0, 0, 0, 0.2);
 }
 
 footer {
-  background-color: #FAF1ED;
+  background-color: #faf1ed;
 }
 
 @media (min-width: 1024px) {
@@ -99,12 +99,12 @@ footer {
   }
 
   .owl-nav .owl-next {
-  position: absolute;
-  top: calc(50% - 25px);
-  right: -30px;
-  opacity: 1;
-  font-size: 40px !important;
-  z-index: 1;
+    position: absolute;
+    top: calc(50% - 25px);
+    right: -30px;
+    opacity: 1;
+    font-size: 40px !important;
+    z-index: 1;
   }
 
   .owl-nav .owl-prev {
@@ -121,6 +121,6 @@ footer {
   }
 
   .cc-item {
-  height: 200px;
-}
+    height: 200px;
+  }
 }
